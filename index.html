@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>年号計算</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<!-- jQueryとjQuery-UIの読み込み -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+	<!-- jQuery UI用のCSSの読み込み -->
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<body>
+	<h1>年号計算機</h1>
+	<!-- タブメニュー -->
+	<div id="tabs">
+		<ul>
+			<li>
+				<a href="#tab1">タブ１</a>
+			</li>
+			<li>
+				<a href="#tab2">タブ２</a>
+			</li>
+		</ul>
+		<div id="tab1">
+			<p>調べたい日付を入力してください。</p>
+			<p>
+				<input type="text" id="year1" maxlength="4">年
+				<input type="text" id="month1" maxlength="2">月
+				<input type="text" id="day1" maxlength="2">日
+			</p>
+			<div class="btn-line">
+				<button id="clear1">クリア</button>
+				<button id="submit1">計算</button>
+			</div>
+			<div id="result1"></div>
+		</div>
+		<div id="tab2">
+			<p>調べたい日付を入力してください。</p>
+			<p>
+				<select name="year2" id="year2">
+					<option value="1">令和</option>
+					<option value="2">平成</option>
+					<option value="3">昭和</option>
+					<option value="4">大正</option>
+					<option value="5">明治</option>
+				</select>年
+				<input type="text" id="month2" maxlength="2">月
+				<input type="text" id="day2" maxlength="2">日
+			</p>
+			<div class="btn-line">
+				<button id="clear2">クリア</button>
+				<button id="submit2">計算</button>
+			</div>
+			<div id="result2"></div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>

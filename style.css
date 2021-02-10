@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+html {
+	/* 枠線・うち余白を込みで計算*/
+	box-sizing: border-box;
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+input {
+	margin: .5rem;
+	width: 3rem;
+}
+
+#tab1,
+#tab2 {
+	height: 70vh;
+}
+
+#year1 {
+	width: 6rem;
+}
+
+.btn-line {
+	margin-right: 3rem;
+	text-align: right;
+}
+
+select {
+	width: 3.6rem;
+}
