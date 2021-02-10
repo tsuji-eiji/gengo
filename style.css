@@ -7,8 +7,22 @@ html {
 	font-family: 'Roboto', sans-serif;
 }
 
+body {
+	margin: 0;
+	height: 100vh;
+	background-color: #35363A;
+}
+
 h1 {
 	text-align: center;
+	padding: 1rem;
+	margin: 0;
+	color: #fff;
+	background-color: #202124;
+}
+
+.input-area {
+	height: 35%;
 }
 
 input {
@@ -30,6 +44,20 @@ input {
 	text-align: right;
 }
 
+.result {
+	margin: auto;
+}
+
 select {
 	width: 3.6rem;
+}
+
+/* レスポンシブ対応 */
+/* 最小幅600px以上のデザイン */
+/* メディアクエリ */
+/* ブレイクポイント */
+@media (min-width: 600px) {
+	#tabs {
+		margin: 1rem 10%;
+	}
 }
