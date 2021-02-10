@@ -21,10 +21,10 @@
 	<div id="tabs">
 		<ul>
 			<li>
-				<a href="#tab1">タブ１</a>
+				<a href="#tab1">西暦→年号</a>
 			</li>
 			<li>
-				<a href="#tab2">タブ２</a>
+				<a href="#tab2">年号→西暦</a>
 			</li>
 		</ul>
 		<div id="tab1">
@@ -43,13 +43,14 @@
 		<div id="tab2">
 			<p>調べたい日付を入力してください。</p>
 			<p>
-				<select name="year2" id="year2">
+				<select name="nengo" id="nengo">
 					<option value="1">令和</option>
 					<option value="2">平成</option>
 					<option value="3">昭和</option>
 					<option value="4">大正</option>
 					<option value="5">明治</option>
-				</select>年
+				</select>
+				<input type="text" id="year2" maxlength="2">年
 				<input type="text" id="month2" maxlength="2">月
 				<input type="text" id="day2" maxlength="2">日
 			</p>
