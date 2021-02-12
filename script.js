@@ -53,6 +53,11 @@ document.getElementById('submit1').addEventListener('click', () => {
 		if (year === 1) {
 			year = '元';
 		}
+		
+		inputYear = zeroErase(inputYear);
+		inputMonth = zeroErase(inputMonth);
+		inputDay = zeroErase(inputDay);
+		
 		year = nengo + year + '年' + Number(inputMonth) + '月' + Number(inputDay) + '日';
 		document.getElementById('result1').innerHTML = `<p><strong>西暦${inputYear}年${inputMonth}月${inputDay}日</strong>は</p><p><strong>${year}</strong>です。</p>`;
 	}
@@ -75,7 +80,7 @@ document.getElementById('submit2').addEventListener('click', () => {
 	if (inputYear === '元') {
 		inputYear = '01';
 	}
-	
+
 
 	//入力チェック
 	const inputDate = new Date(inputYear, inputMonth - 1, inputDay);
@@ -140,7 +145,10 @@ document.getElementById('submit2').addEventListener('click', () => {
 
 	function output(nengo, addYear) {
 		let out = '';
-		if (inputYear === '01') {
+		inputYear = zeroErase(inputYear);
+		inputMonth = zeroErase(inputMonth);
+		inputDay = zeroErase(inputDay);
+		if (inputYear === '1') {
 			out = `<strong>${nengo}元年${inputMonth}月${inputDay}日</strong>は<br><strong>西暦${Number(inputYear) + addYear}年${inputMonth}月${inputDay}日</strong>です。`;
 		} else {
 			out = `<strong>${nengo}${inputYear}年${inputMonth}月${inputDay}日</strong>は<br><strong>西暦${Number(inputYear) + addYear}年${inputMonth}月${inputDay}日</strong>です。`;
@@ -160,4 +168,13 @@ document.getElementById('clear2').addEventListener('click', () => {
 //ゼロ埋めfunction
 function zeroPadding(input, length) {
 	return (Array(length).join('0') + input).slice(-length);
+}
+
+//ゼロ消しfunction
+function zeroErase(input) {
+	if (input.slice(0, 1) === '0') {
+		return input.slice(1);
+	}else{
+		return input;
+	}
 }
